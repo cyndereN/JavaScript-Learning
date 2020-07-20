@@ -1,0 +1,41 @@
+'use strict';
+
+var arr = ['Bart', 'Lisa', 'Adam'];
+
+// for...in 方法遍历
+
+for(var i in arr){
+
+console.log(arr[i]);}
+
+// for 正序遍历不改变数组（reverse改变数组）
+
+for(var i=0; i<arr.length;i++){
+
+console.log('hello,'+ arr[i]);}
+
+// for 逆序遍历
+
+for(var i=arr.length-1; 0<=i;i--){
+
+console.log('hello,'+ arr[i]);}
+
+// while 正序遍历
+
+var l=0;
+
+while(l<arr.length){
+
+console.log('hello,'+ arr[l]);
+
+l++;}
+
+// while 逆序遍历
+
+var l=arr.length-1;
+
+while(l>=0){
+
+console.log('hello,'+ arr[l]);
+
+l--;}

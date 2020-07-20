@@ -1,0 +1,10 @@
+'use strict';
+var age = 20;
+if (age >= 6) {
+    console.log('teenager');
+} else if (age >= 18) {
+    console.log('adult');
+} else {
+    console.log('kid');
+}
+//teenager

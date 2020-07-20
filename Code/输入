@@ -1,0 +1,29 @@
+'use strict';
+
+var height = parseFloat(prompt('请输入身高(m):'));
+
+var weight = parseFloat(prompt('请输入体重(kg):'));
+
+var bmi = weight/(height*height);
+
+if(bmi>32){
+
+console.log('严重肥胖');
+
+}else if(bmi>28){
+
+console.log('肥胖');
+
+}else if(bmi>25){
+
+console.log('过重');
+
+}else if(bmi>18.5){
+
+console.log('正常');
+
+}else{
+
+console.log('过轻');
+
+}
