@@ -1,0 +1,95 @@
+function abs(x) {
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+}
+
+
+var abs = function (x) {
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+};
+
+//两种函数定义方法
+
+
+function abs(x) {
+    if (typeof x !== 'number') {
+        throw 'Not a number';
+    }
+    if (x >= 0) {
+        return x;
+    } else {
+        return -x;
+    }
+}
+
+//检查参数
+
+
+function foo(x) {
+    console.log('x = ' + x); // 10
+    for (var i=0; i<arguments.length; i++) {
+        console.log('arg ' + i + ' = ' + arguments[i]); // 10, 20, 30
+    }
+}
+foo(10, 20, 30);
+
+//arguments
+
+/*x = 10
+arg 0 = 10
+arg 1 = 20
+arg 2 = 30*/
+
+
+function foo(a, b, ...rest) {
+    console.log('a = ' + a);
+    console.log('b = ' + b);
+    console.log(rest);
+}
+
+//rest
+
+foo(1, 2, 3, 4, 5);
+// 结果:
+// a = 1
+// b = 2
+// Array [ 3, 4, 5 ]
+
+foo(1);
+// 结果:
+// a = 1
+// b = undefined
+// Array []
+
+function sum(...rest) {
+    var sum = 0;
+    rest.forEach(function (element) {
+        sum += element;
+    });
+    return sum;
+}
+
+function area_of_circle(r, pi) {
+    var area;
+    if (arguments.length == 1) {
+        area = Math.pow(r, 2) * 3.14;
+    } else {
+        area = Math.pow(r, 2) * pi;
+    }
+    return area;
+}
+
+function max(a, b) {
+    var maxNum = a;
+    if (a < b) {
+        maxNum = b;
+    }
+    return maxNum;
+}
