@@ -1,0 +1,14 @@
+var person = {
+    name: '小明',
+    age: 20,
+    gender: 'male',
+    passport: 'G-12345678',
+    school: 'No.4 middle school'
+};
+
+// 把passport属性赋值给变量id:
+let {name, passport:id} = person;
+name; // '小明'
+id; // 'G-12345678'
+// 注意: passport不是变量，而是为了让变量id获得passport属性:
+passport; // Uncaught ReferenceError: passport is not defined
