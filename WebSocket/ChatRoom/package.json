@@ -1,0 +1,16 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^7.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
