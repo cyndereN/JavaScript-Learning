@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById("btn");
+            btn.onclick = function(){
+                alert("Clicked");
+            }
+            alert("hello");
+        }  // 页面加载完才会执行,确保执行时所有DOM对象已经加载完毕
+    </script>
+</head>
+<body>
+    <button id="btn">Button</button>
+    <!--<script type="text/javascript">
+        var btn = document.getElementById("btn");
+        console.log(btn.innerHTML); // Button
+        // 绑定一个单击事件
+        btn.onclick = function(){
+            alert("Clicked");
+        }
+        
+    </script>-->
+</body>
+</html>

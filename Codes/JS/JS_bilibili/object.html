@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj = new Object();
+        obj.name = "Amy"
+        obj.age = 20
+        obj["123"] = 789  // 更灵活
+        obj["nihao"] = "你好"
+        var n = "123"
+        console.log(obj["123"])
+        console.log(obj["n"])
+
+        // 用字面量创建对象
+        var obj = {};
+        obj.name = "Bob"
+
+        function fun(){
+            consol.log(this);
+        }
+
+        var obj2 = {
+            name: "Candy",
+            age: 28,
+            gender: "male",  
+            friend:{
+                name: obj.name
+            },
+            sayName: fun    //没属性了不用写逗号
+        }
+
+        
+
+        for (var n in obj2){
+            console.log(n);    // n是属性名的变量
+            console.log(obj[n])
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 工厂方式创建对象
+        function createPerson(name, age, gender){
+            var obj = new Object();
+            obj.name = name;
+            obj.age = age;
+            obj.gender = gender;
+            obj.sayName = function(){
+                alert(this.name);
+            }
+            return obj;
+        }
+        function Person(name, age, gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.sayName = function(){
+                alert(this.name);
+            }
+        } 
+        // 函数对象有个属性prototye,属性指向原型对象
+        // 如果作为普通函数调用,没有作用
+        // 如果通过构造函数调用，他所创建的对象都会有
+        // 一个隐含属性，指向该构造函数的原型对象，
+        // 可以用__proto__访问
+        function MyClass(){
+        }
+        var mc = new MyClass();
+        console.log(mc.__proto__ == MyClass.prototye); // true
+
+        //可以把对象中共有的内容统一设置到原型对象中
+        MyClass.prototype.a = 123;
+        MyClass.prototype.sayHello = function(){
+            alert("Hello")
+        }
+        var mc = new MyClass();
+        console.log(mc.a); // 先在自身找，如果找到则使用，没有用就去原型对象中寻找
+        
+        // 不会污染全局作用域
+
+        // 原型对象也有原型,直到Object没有原型
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

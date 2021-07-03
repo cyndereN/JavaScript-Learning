@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var fun = new Function("console.log('Hello world')") // 用var会声明提前
+        // 函数也是对象
+        fun.hello = "你好"
+        console.log(fun.hello)
+         
+        function func2(a){
+            console.log("a = " +a);
+        }
+
+        fun(function(){alert("hello")}); // 函数作为参数
+
+        //全局作用域中有一个全局对象window, 变量作为其属性，函数作为方法
+        //代表一个浏览器窗口，有浏览器创建，关闭时销毁
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
