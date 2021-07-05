@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 <div>{{username}}</div>
+	 <div>{{age}}</div>
+	 <div>
+	 	{{if age > 18}}
+			妹妹哥哥来了
+		{{else}}
+			你走吧
+		{{/if}}
+	 </div>
+	 <div>
+	 	{{each orders as order index}}
+		    {{index}} {{order.title}}
+		{{/each}}
+	 </div>
+</body>
+</html>
