@@ -1,7 +1,7 @@
 ;((doc, storage, location) => {
 
     const oUsername = doc.querySelector('#username');
-    const OEnterBtn = doc.querySelector('#enter');
+    const oEnterBtn = doc.querySelector('#enter');
 
     const init = () => {
         bindEvent();
