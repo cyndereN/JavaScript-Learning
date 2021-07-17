@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    var webgl = null;
+    function Init() {
+        var canvas = document.getElementById('myCanvas');
+        webgl = canvas.getContext('webgl');
+
+        webgl.viewport(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+        webgl.clearColor(0.0, 0.0, 0.0, 1);
+        webgl.clear(webgl.COLOR_BUFFER_BIT);
+    }
+</script>
+<body onload = "Init()">
+    <canvas id="myCanvas" style="border: 1px solid red;" width='600' height='450'></canvas>
+    
+</body>
+</html>
